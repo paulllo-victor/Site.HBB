@@ -1,0 +1,109 @@
+/*
+ * Autor: Jefferson Ricardo / Paulo Victor
+ * Versão: 1.0
+ * Data de crialçao: 07/07/2020 18:56hs
+ * Referência: Folha de estilos (CSS)
+ * Conteúdo: Geral
+ * =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ * Facebook: https://www.facebook.com/jeffersonrmsilva
+ * Celular: 81 99668-0318
+ *
+ * Facebook: https://www.facebook.com/profile.php?id=100004332602666
+ * Celular: 81 98657-8987
+*/
+@media screen and (max-width: 1000px){
+	div.produto-single{
+		width: 100%;
+		margin-top: 0;
+	}
+	div.produto-single:nth-of-type(2){
+		margin-top: 10px;
+	}
+}
+@media screen and (max-width: 800px){
+	div.logo-empresa{
+		line-height: 48px;
+	}
+	.button-mobile{
+		width: 50px;
+		height: 50px;
+		display: inline-block;
+		margin-left: 20px;
+		background-size: 100% 100%;
+		cursor: pointer;
+	}
+	.menu-navegacao nav ul{
+		display: none;
+	}
+	.menu-navegacao nav ul.show{
+		position: absolute;
+		right: 0;
+		top: 0;
+		display: block;
+		height: 100vh;		
+		background-color: rgba(0,0,0,0.8);
+		width: 80%;
+	}
+	div.menu-navegacao nav ul li{
+		padding-bottom: 40px;
+		display: block;
+		margin-right: 0;
+		margin-top: 0;
+		padding-left: 40px;
+	}
+	div.close-menu-mobile{
+		margin-bottom: 30px;
+		display: block;
+		padding: 20px 40px;
+		border: 0;
+		border-bottom: 1px solid #ccc;
+		font-size: 30px;
+		color: red;
+		font-weight: bolder;
+	}
+	div.close-menu-mobile span{
+		cursor: pointer;
+	}
+	.menu-navegacao nav > a{
+		margin-top: 5px;		
+	}
+	div.banner-imagem img{
+		width: inherit;
+	}
+	.modal-formulario{
+		width: 200px;
+		height: 200px;
+	}
+	div.container-produtos{
+		display: block;
+		align-items: initial;
+	}
+	div.imagem-produto{
+		width: 100%;
+		min-width: 300px;
+		height: 300px;
+		margin-bottom: 40px;
+	}
+	div.descricao-produto{
+		width: 100%;
+		padding-left: 0;
+	}
+	div.descricao-produto h2,div.descricao-produto h3{
+		text-align: center;
+	}
+	div.container-video{
+		display: block;
+	}
+	div.video{
+		border-radius: 30px;
+		background-color: #ccc;
+		width: 100%;
+		min-width: 400px;
+		height: 500px;
+	}
+	div.descricao-video{
+		margin-top: 40px;
+		padding-left: 0;
+		width: 100%;
+	}
+}

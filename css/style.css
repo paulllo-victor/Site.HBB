@@ -1,0 +1,385 @@
+/*
+ * Autor: Jefferson Ricardo / Paulo Victor
+ * Versão: 1.0
+ * Data de crialçao: 07/07/2020 18:56hs
+ * Referência: Folha de estilos (CSS)
+ * Conteúdo: Geral
+ * =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ * Facebook: https://www.facebook.com/jeffersonrmsilva
+ * Celular: 81 99668-0318
+ *
+ * Facebook: https://www.facebook.com/profile.php?id=100004332602666
+ * Celular: 81 98657-8987
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Spartan&display=swap');
+/*
+ ! ANEXOS DE ESTILOS
+*/
+@import url('resposivo.css');
+/**/
+
+/*
+ ! BASE PADRÃO
+*/
+*{
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing: border-box;
+	word-break: break-word;
+	font-family: 'Spartan', sans-serif;
+}
+html,body{
+	height: 100%;
+	width: 100%;
+}
+.bg-fixo{
+	background-attachment: fixed !important;
+}
+.bg-no-repeat{
+	background-repeat: no-repeat !important;
+}
+.bg-cover{
+	background-size: cover !important;
+}
+.bg-centro{
+	background-position: center top 0 !important;
+}
+.clearfix{
+	clear: both;
+}
+/***/
+
+/**********************************
+		TELA DE CARREGAMENTO
+***********************************/
+.container-carregamento{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.spin-carregamento{
+	width: 64px;
+	height: 64px;
+	border-radius: 32px;
+	border: 5px solid rgba(200,200,200,.5);
+	border-left-color: black;
+	animation: spin 1s linear infinite;
+}
+@keyframes spin{
+	to{transform: rotate(360deg);}
+}
+/***/
+/**********************************
+		CORPO DO SITE
+***********************************/
+.wraper{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	display: none
+}
+.wraper.show{
+	display: block;
+}
+/***/
+/**********************************
+		HEADER SITE
+***********************************/
+header{
+	z-index: 3;
+	font-size: 14px;
+	position: fixed;
+	width: 100%;
+	padding: 20px 5%;
+	background-color: transparent;
+}
+header.fixedTop{
+	display: none;
+	background-color: black;
+	border-bottom: 2px solid #fff;
+}
+.logo-empresa{
+	text-align: center;
+	line-height: 40px;
+	width: 140px;
+	height: 40px;
+}
+.logo-empresa a{
+	text-decoration: none;
+	color: #fff;
+}
+.menu-navegacao nav ul li{
+	display: inline-block;
+	margin-right: 20px;
+	margin-top: 10px;
+}
+.menu-navegacao a{
+	text-decoration: none;
+	color: #fff;
+}
+.close-menu-mobile{
+	display: none;
+}
+.menu-navegacao nav > a{
+	padding: 12px 20px 8px 20px;
+	background-color: #FC6538;
+	border-radius: 10px;
+	transition: background-color 1s;
+}
+.menu-navegacao nav > a:hover{
+	background-color: black;
+}
+/***/
+/**********************************
+		BANNER SITE
+***********************************/
+.overlap{
+	width: 100%;
+	height: 90vh;
+	background-color: rgba(0,0,0,.4);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+.banner-imagem{
+	position: relative;
+	width: 100%;
+	height: 90vh;
+	z-index: 1;
+}
+.banner-imagem img{
+	display: none;
+	width: 100%;
+	position: absolute;
+	height: 90vh;
+}
+.slide-op{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	bottom: 10px;
+}
+.slide-op span{
+	width: 32px;
+	height: 8px;
+	background-color: rgba(224,195,165,.4);
+	border-radius: 32px;
+	float: left;
+	margin: 0 10px;
+	cursor: pointer;
+}
+/***/
+/**********************************
+		FORMULARIO MODAL HEADER
+***********************************/
+.container-modal-formulario{
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.6);
+	z-index: 99;
+	overflow: auto
+}
+#formulario.show{
+	display: block;
+}
+.container-modal-formulario.show {
+	display: block;
+}
+.modal-formulario {
+	width: 400px;
+	height: 400px;
+	padding: 20px;
+	background-color: #fff;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	border-radius: 10px;
+	border: 2px solid rgba(203,97,69,1);
+}
+.modal-formulario h3{
+	margin-bottom: 10px;
+}
+.modal-formulario span{
+	font-size: 13px;
+}
+.modal-formulario input[type=text],.modal-formulario input[type=email]{
+	height: 36px;
+	padding-left: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+}
+.modal-formulario textarea{
+	height: 100px;
+	padding: 10px 10px;
+	margin-bottom: 3px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	resize: none;
+}
+.modal-formulario input[type=submit]{
+	margin-top:20px;
+	cursor: pointer;
+	padding: 10px 30px;
+	border: 0;
+	border-radius: 15px;
+	background-color: #FC6538;
+	color: #fff;
+}
+.modal-formulario > span{
+	position: absolute;
+	right: -16px;
+	top: -16px;
+	width: 32px;
+	height: 32px;
+	background-color: black;
+	color: red;
+	line-height: 32px;
+	text-align: center;
+	border-radius: 16px;
+	font-size: 18px;
+	cursor: pointer;
+}
+/***/
+/**********************************
+		PRODUTOS SITE
+***********************************/
+.produtos {
+	position: relative;
+	width:100%;
+	padding: 60px 5%;
+}
+.chamada-produtos > span{
+	display: inline-block;
+	width: 64px;
+	height: 6px;
+	background-color: #ccc;
+	border-radius: 3px;
+	background-color: rgba(252,101,56,0.4);
+}
+.container-produtos{
+	margin-top: 40px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+.imagem-produto{
+	border-radius: 50px;
+	width: 40%;
+	min-width: 400px;
+	height: 400px;
+	background-color: #ccc;
+}
+.descricao-produto{
+	width: 60%;
+	padding-left: 30px;
+}
+.descricao-produto h2{
+	font-size: 35px;
+	margin-bottom: 2px;
+}
+.descricao-produto h3{
+	font-size: 13px;
+	font-style: italic;
+	margin-bottom: 10px;
+	font-weight: normal;
+}
+.vitrine-produtos{
+	margin-top: 50px;
+	padding: 20px 5%;
+}
+.produto-single{
+	margin-top: 40px;
+	width: calc(100% / 3);
+	height: 400px;
+	
+	cursor: pointer;
+	border:10px solid #fff;
+	border-radius: 60px;
+	margin-bottom: 50px;
+}
+.button-vitrine a{
+	text-decoration: none;
+	padding: 10px 20px;
+	border: 3px solid #E5C6A7 !important;
+	border-radius: 10px;
+	color: #E5C6A7;
+}
+/***/
+/**********************************
+		VIDEO SITE
+***********************************/
+.container-video{
+	padding: 80px 0;
+	display: flex;
+	align-items: center;
+}
+.video{
+	border-radius: 30px;
+	background-color: #ccc;
+	width: 50%;
+	min-width: 400px;
+	height: 500px;
+}
+.descricao-video{
+	padding-left: 30px;
+	width: 50%;
+}
+.descricao-video p{
+	margin-top: 20px;
+}
+/***/
+/**********************************
+		FLOAT SITE
+***********************************/
+.float-left{
+	float: left;
+}
+.float-right{
+	float: right;
+}
+/***/
+/**********************************
+		ALINHAMENTO TEXTO
+***********************************/
+.text-center{
+	text-align: center !important;
+}
+.text-left{
+	text-align:  left !important;
+}
+.text-right{
+	text-align: right !important;
+}
+.text-justify{
+	text-align: justify;
+}
+
+/***/
+/**********************************
+		TAMANHO DO WIDTH
+***********************************/
+.w-100{
+	width: 100%;
+}
+.w-50{
+	width: 50%;
+}
+/***/
+/**********************************
+		HEADER SITE
+***********************************/
+
+/***/
