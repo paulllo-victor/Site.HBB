@@ -13,6 +13,7 @@
 */
 
 @import url('https://fonts.googleapis.com/css?family=Spartan&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Teko&display=swap');
 /*
  ! ANEXOS DE ESTILOS
 */
@@ -141,8 +142,8 @@ header.fixedTop{
 ***********************************/
 .overlap{
 	width: 100%;
-	height: 90vh;
-	background-color: rgba(0,0,0,.4);
+	height: 100vh;
+	background-color: rgba(0,0,0,.6);
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -151,14 +152,33 @@ header.fixedTop{
 .banner-imagem{
 	position: relative;
 	width: 100%;
-	height: 90vh;
+	height: 100vh;
 	z-index: 1;
 }
 .banner-imagem img{
 	display: none;
 	width: 100%;
+	height: 100%;
+}
+.imagem-single-banner{
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+.overlap .chamada-banner{
 	position: absolute;
-	height: 90vh;
+	left: 50%;
+	top: 45%;
+	transform: translate(-50%,-50%);
+}
+.chamada-banner img{	
+	width: 250px;
+}
+.chamada-banner h2{
+	font-family: 'Teko', sans-serif;
+	color: #fff;
+	text-align: center;
+	font-size: 50px;
 }
 .slide-op{
 	position: absolute;
@@ -254,12 +274,34 @@ header.fixedTop{
 }
 /***/
 /**********************************
+		MODAIS PRODUTO
+***********************************/
+.cotainer-modal-produto{
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.6);
+	left: 0;
+	top: 0;
+	z-index: 999;
+}
+.cotainer-modal-produto.show{
+	display: block;
+}
+.conteudo-modal-produto img{
+	width: 150px;
+	border-radius: 20px;
+	margin-bottom: 8px;
+}
+/***/
+/**********************************
 		PRODUTOS SITE
 ***********************************/
 .produtos {
 	position: relative;
 	width:100%;
-	padding: 60px 5%;
+	padding: 60px 0;
 }
 .chamada-produtos > span{
 	display: inline-block;
@@ -267,20 +309,22 @@ header.fixedTop{
 	height: 6px;
 	background-color: #ccc;
 	border-radius: 3px;
-	background-color: rgba(252,101,56,0.4);
+	background-color: rgba(252,101,56,0.6);
 }
 .container-produtos{
 	margin-top: 40px;
 	width: 100%;
 	display: flex;
 	align-items: center;
+	padding: 0 5%;
 }
 .imagem-produto{
 	border-radius: 50px;
 	width: 40%;
 	min-width: 400px;
 	height: 400px;
-	background-color: #ccc;
+	background-size: cover;
+	background-position: center;
 }
 .descricao-produto{
 	width: 60%;
@@ -297,41 +341,72 @@ header.fixedTop{
 	font-weight: normal;
 }
 .vitrine-produtos{
+	background-color: #ccc;
 	margin-top: 50px;
-	padding: 20px 5%;
+	position: relative;
 }
-.produto-single{
-	margin-top: 40px;
-	width: calc(100% / 3);
+.overlap-vitrine{	
+	padding: 30px 5%;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+}
+.produto-single{	
+	width: calc(98% / 3);
 	height: 400px;
-	
 	cursor: pointer;
-	border:10px solid #fff;
+	border:6px solid #fff;
 	border-radius: 60px;
-	margin-bottom: 50px;
+	margin-bottom: 40px;
+	margin-left: 5px;
+	margin-top: 40px;
+}
+.nome-produto{
+	display: none;
+	background-color: rgba(0,0,0,0.6);
+	width: 100%;
+	height: 100%;
+	border-radius: 50px;
+	position: relative;
+}
+.nome-produto h2{
+	width: 100%;
+	color: white;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	font-size: 30px;
+	font-weight: normal;
+	text-transform: uppercase;
+	text-align: center;
 }
 .button-vitrine a{
-	text-decoration: none;
 	padding: 10px 20px;
-	border: 3px solid #E5C6A7 !important;
-	border-radius: 10px;
-	color: #E5C6A7;
+    border: 2px solid #FF5722 !important;
+    text-decoration: none;
+    color: #FF5722;
+    border-radius: 10px;
 }
 /***/
 /**********************************
 		VIDEO SITE
 ***********************************/
 .container-video{
-	padding: 80px 0;
+	padding: 40px 5%;
 	display: flex;
 	align-items: center;
 }
 .video{
 	border-radius: 30px;
-	background-color: #ccc;
 	width: 50%;
-	min-width: 400px;
 	height: 500px;
+	display: flex;
+	align-items: center;
+}
+.video video{
+	width: 100%;
+	border-radius: 30px;
 }
 .descricao-video{
 	padding-left: 30px;
@@ -339,6 +414,113 @@ header.fixedTop{
 }
 .descricao-video p{
 	margin-top: 20px;
+}
+/***/
+/**********************************
+		QUEM SOMOS SITE
+***********************************/
+.container-sobre{
+	width: 100%;
+	padding-top: 31%;
+	min-height: 480px;
+	position: relative;
+}
+.overlap-sobre{
+	padding: 40px;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	background-color: rgba(0,0,0,0.5);
+}
+.title-conteuto p{
+	margin-top: 30px;
+}
+.title-conteuto img{
+	margin-top: 30px;
+	width: 150px;
+}
+/***/
+/**********************************
+		PUBLICACOES
+***********************************/
+.area-publicacoes{
+	padding: 40px;
+	width: 100%;
+}
+.title-publicacao h3{
+	color: rgba(252,101,56,0.4);
+	text-transform: uppercase;
+	font-size: 16px;	
+	font-weight: normal;
+	margin-bottom: 10px;
+}
+.title-publicacao h2{
+	font-size: 40px;
+}
+.container-publicacoes{
+	padding: 40px 0;
+	width: 100%;
+	margin: 0 auto
+}
+.single-puplicacoes{
+	border-top: 1px solid #ccc;
+	width: 100%;
+	padding: 50px 2%;
+	background-color: white;
+}
+.img-publicacao{
+	float: left;
+	width: 200px;
+	height: 200px;
+	background-color: red;
+	border-radius: 50px;
+}
+.conteudo-publicacao{
+	float: left;
+	width: 80%;
+	padding: 20px 0 0 20px;
+}
+.single-puplicacoes:last-child{
+	border-bottom: 1px solid #ccc;
+}
+.conteudo-publicacao span{
+	font-size: 10px;
+	text-transform: uppercase;
+}
+.conteudo-publicacao h2{
+	margin-top: 5px;
+	margin-bottom: 8px;
+	font-size: 20px;
+}
+.conteudo-publicacao p{
+	line-height: 20px;
+	font-size: 15px;
+}
+.button-publicacoes a{
+	padding: 10px 20px;
+	border: 2px solid #FF5722 !important;
+	text-decoration: none;
+	color: #FF5722;
+	border-radius: 10px;
+}
+.button-publicacoes a:hover{
+	/*background-color: rgba(0,0,0,.2);*/
+}
+/***/
+/**********************************
+		RODAPE
+***********************************/
+footer{
+	margin-top: 50px;
+	padding: 40px 2%;
+	background-color: #FC6538;
+	border-top: 2px solid #000;
+}
+footer p{
+	color: #fff;
 }
 /***/
 /**********************************
@@ -366,7 +548,9 @@ header.fixedTop{
 .text-justify{
 	text-align: justify;
 }
-
+.text-white{
+	color: white !important;
+}
 /***/
 /**********************************
 		TAMANHO DO WIDTH

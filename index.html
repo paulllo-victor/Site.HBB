@@ -32,7 +32,7 @@
 
 		<header>
 			<div class="logo-empresa float-left">
-				<h2><a href="#">Health Balls</a></h2>
+				<h2><nav><a href="#home">Health Balls</a></nav></h2>
 			</div><!--logo-empresa-->
 
 			<div class="menu-navegacao float-right">
@@ -40,10 +40,10 @@
 
 					<ul class="float-left">
 						<div class="close-menu-mobile"><span>x</span></div>
-						<li><a class="home" style="border: 0; border-bottom: 2px solid #FC6538;" href="#">HOME</a></li>
-						<li><a class="produto" href="#">PRODUTO</a></li>
-						<li><a class="quem-somos" href="#">QUEM SOMOS</a></li>
-						<li><a href="#">PUBLICAÇÕES</a></li>
+						<li><a class="home" style="border: 0; border-bottom: 2px solid #FC6538;" href="#home">HOME</a></li>
+						<li><a class="produto" href="#produto">PRODUTO</a></li>
+						<li><a class="quem-somos" href="#quem-somos">QUEM SOMOS</a></li>
+						<li><a class="publicacoes" href="#publicacoes">PUBLICAÇÕES</a></li>
 					</ul>
 						<a class="open-modal float-left" href="javascript:void(0);" >CONTATO</a><!-- data-toggle="modal" data-target="#formulario" -->
 						<div style="background-image:url('imagens/icones/menu.png');" class="float-left button-mobile"></div>
@@ -75,31 +75,77 @@
 		<!--**********************************************
 					BANNER SITE
 		**************************************************-->
-		<section target="home" class="banner">
+		<section id="home" target="home" class="banner">
 			<div class="overlap">
-				<div class="slide-op">
-					
+				<div class="chamada-banner">
+					<img src="imagens/icones/logoHB.png">
+					<h2>Health Balls Brazil</h2>
 				</div>
+				<div class="slide-op"></div>
 			</div>
-			<div class="banner-imagem bg-no-repeat bg-cover bg-centro bg-fixo">
-				<img src="imagens/banner/img1.jpg">
-				<img src="imagens/banner/img2.jpg">
-				<img src="imagens/banner/img3.jpg">				
+			<div class="banner-imagem">
+				<div class="imagem-single-banner bg-centro bg-no-repeat bg-cover" style="background-image: url(imagens/banner/pacoca-bg-2.jpg);"></div>
+				<div class="imagem-single-banner bg-centro bg-no-repeat bg-cover" style="background-image: url('imagens/banner/figo-bg-2.jpg');"></div>
+				<div class="imagem-single-banner bg-centro bg-no-repeat bg-cover" style="background-image: url('imagens/banner/figo-bg.jpg');"></div>	
+
 			</div>
 			
 		</section>
 		<!-- FIM BANNER -->
+
+		<!--**********************************************
+					MODAIS PRODUTOS
+		**************************************************-->
+		<div class="cotainer-modal-produto" id="produto1">
+			<div class="modal-formulario">
+				<span class="close-modal" data-close="modal">x</span>
+				<div class="conteudo-modal-produto text-center">
+					<img src="imagens/produtos/cacau-baunilha.jpg">
+					<h2>Produto 1</h2>
+					<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat.</p>
+				</div>
+			</div>
+		</div>
+		<div class="cotainer-modal-produto" id="produto2">
+			<div class="modal-formulario">
+				<span class="close-modal" data-close="modal">x</span>
+				<div class="conteudo-modal-produto text-center">
+					<img src="imagens/produtos/damasco.jpg">
+					<h2>Produto 2</h2>
+					<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat.</p>
+				</div>
+			</div>
+		</div>
+		<div class="cotainer-modal-produto" id="produto3">
+			<div class="modal-formulario">
+				<span class="close-modal" data-close="modal">x</span>
+				<div class="conteudo-modal-produto text-center">
+					<img src="imagens/produtos/pacoca.jpg">
+					<h2>Produto 3</h2>
+					<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. </p>
+				</div>
+			</div>
+		</div>
+		<!-- FIM MODAIS PRODUTOS -->
 		<!--**********************************************
 					PRODUTOS SITE
 		**************************************************-->
-			<section target="produto" class="produtos">
+			<section id="produto" target="produto" class="produtos">
 				<div class="text-center chamada-produtos">
 					<h2>O que são as Health Balls?</h2>
 					<span></span>
 				</div>
 				<div class="container-produtos">					
-					<div class="imagem-produto">						
-					</div>
+					<div style="background-image: url('imagens/produtos/figo.jpg');" class="imagem-produto"></div>
 					<div class="descricao-produto text-justify">
 						<h2>Health Balls</h2>
 						<h3>lorem impum</h3>
@@ -111,27 +157,38 @@
 						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 					</div>
 				</div>
-				<div class="w-100 vitrine-produtos">
-					<div class="text-center chamada-produtos">
-						<h2>Nossos Produtos</h2>
+				<div style="background-image: url('imagens/banner/pacoca-bg.jpg');" class="w-100 vitrine-produtos bg-fixo bg-centro bg-no-repeat bg-cover">
+					<div class="overlap-vitrine">
+						<div class="text-center chamada-produtos">
+						<h2 style="color: white">Nossos Produtos</h2>
 						<span></span>
-					</div>
-					<div target="produto1" style="background-image: url('imagens/produtos/produto1.png');" class="bg-no-repeat bg-cover float-left produto-single">
-						
-					</div>
-					<div target="produto2" style="background-image: url('imagens/produtos/produto2.png');" class="bg-no-repeat bg-cover float-left produto-single">
-						
-					</div>
-					<div target="produto3" style="background-image: url('imagens/produtos/produto3.png');" class="bg-no-repeat bg-cover float-left produto-single">						
-					</div>
-					<div class="text-center button-vitrine">
-						<a href="#">VER MAIS</a>
-					</div>
-					<div class="clearfix"></div>
-				</div>
+						</div>
+						<div target="#produto1" nome="produto1" style="background-image: url('imagens/produtos/cacau-baunilha.jpg');" class="bg-no-repeat bg-cover float-left produto-single">
+							<div class="nome-produto produto1">
+								<h2>Cacau Baunilha</h2>
+							</div>
+						</div>
+						<div target="#produto2" nome="produto2" style="background-image: url('imagens/produtos/damasco.jpg');" class="bg-no-repeat bg-cover float-left produto-single">
+							<div class="nome-produto produto2">
+								<h2>Damasco</h2>
+							</div>
+						</div>
+						<div target="#produto3" nome="produto3" style="background-image: url('imagens/produtos/pacoca.jpg');" class="bg-no-repeat bg-cover float-left produto-single">
+						<div class="nome-produto produto3">
+								<h2>Paçoca</h2>
+							</div>				
+						</div>
+						<div class="text-center button-vitrine">
+							<a href="#">VER MAIS</a>
+						</div>
+						<div class="clearfix"></div>
+					</div><!--overlap-vitrine-->
+				</div><!--virine-produtos-->
 				<div class="text-center container-video">
 					<div class="video text-center">
-						<span>Video</span>
+						<video controls>
+							<source src="imagens/video/hbb.mp4" type="video/mp4">
+						</video>
 					</div>
 					<div class="text-center descricao-video chamada-produtos">
 						<h2>Descrição vídeo</h2>
@@ -149,12 +206,78 @@
 		<!--**********************************************
 					QUEM SOMOS SITE
 		**************************************************-->
-		<section target="quem-somos">
-
+		<section id="quem-somos" style="background-image: url('imagens/produtos/cacau-cranberry.jpg');" target="quem-somos" class="bg-fixo bg-cover bg-centro bg-no-repeat container-sobre"><!-- style="background-image: url('imagens/produtos/produto1.png');"		 -->
+			<div class="overlap-sobre">
+				<div class="text-white conteudo-overlap">
+					<div class=" text-center title-conteuto">
+						<h2>Quem Somos</h2>
+						<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua."</p>
+						<img src="imagens/icones/logoHB.png">
+					</div>
+				</div>
+			</div>
 		</section>
 		<!-- FIM QUEM SOMOS -->
+		<!--**********************************************
+					PUBLICACAO
+		**************************************************-->
+		<section target="publicacoes" id="publicacoes" class="area-publicacoes">
+			<div class="title-publicacao text-center">
+				<h3>fique por dentro</h3>
+			<h2 class="text-center">Publicações</h2>
+			</div>
+			<div class="container-publicacoes">
+				<div class="single-puplicacoes">
+					<div style="background-image: url('imagens/publicacoes/publicacao1.jpg');" class="img-publicacao bg-centro bg-cover"></div>
+					<div class="conteudo-publicacao">
+						<span>publicacão</span>
+						<h2>PUBLICAÇÃO 1</h2>
+						<p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+					</div>	
+
+				<div class="clearfix"></div>				
+				</div>
+				<div class="single-puplicacoes">
+					<div style="background-image: url('imagens/publicacoes/publicacao2.jpg');" class="img-publicacao bg-centro bg-cover"></div>
+					<div class="conteudo-publicacao">
+						<span>publicacão</span>
+						<h2>PUBLICAÇÃO 1</h2>
+						<p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+					</div>
+				<div class="clearfix"></div>	
+				</div>
+				<div class="single-puplicacoes">
+					<div style="background-image: url('imagens/publicacoes/publicacao3.jpg');" class="img-publicacao bg-centro bg-cover"></div>
+					<div class="conteudo-publicacao">
+						<span>publicacão</span>
+						<h2>PUBLICAÇÃO 1</h2>
+						<p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+					</div>					
+				<div class="clearfix"></div>					
+				</div>
+			</div>			
+				<div class="text-center button-publicacoes">
+					<a href="#">LER MAIS</a>
+				</div>
+		</section>
+		<!-- FIM PUBLICACAO -->
+		<!--**********************************************
+					RODAPE
+		**************************************************-->
+		<footer class="text-center">
+				<p>Copyright © 2020 - Todos os Direitos Reservados - Recife - PE</p>
+		</footer>
+		<!-- FIM RODAPE -->
 	</div><!--wrapper-->
 	<!-- FIM CORPO SITE -->
+	
 <!--
 ******************************************************
 

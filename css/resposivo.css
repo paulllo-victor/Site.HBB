@@ -11,6 +11,23 @@
  * Facebook: https://www.facebook.com/profile.php?id=100004332602666
  * Celular: 81 98657-8987
 */
+@media screen and (max-width: 1330px){
+	div.single-puplicacoes{
+		text-align: center;
+	}
+	div.img-publicacao{
+		display: inline-block;
+		float: none;
+		width: 200px;
+		height: 200px;
+	}
+	div.conteudo-publicacao{
+		display: inline-block;
+		float: none;
+		width: 100%;
+		padding: 20px 0 0 0;
+	}
+}
 @media screen and (max-width: 1000px){
 	div.produto-single{
 		width: 100%;
@@ -64,8 +81,9 @@
 	div.close-menu-mobile span{
 		cursor: pointer;
 	}
-	.menu-navegacao nav > a{
-		margin-top: 5px;		
+	div.menu-navegacao nav > a{
+		padding: 12px 10px 8px 10px;
+		margin-top: 5px;
 	}
 	div.banner-imagem img{
 		width: inherit;
@@ -92,18 +110,31 @@
 		text-align: center;
 	}
 	div.container-video{
+		margin-top: 50px;
 		display: block;
 	}
 	div.video{
 		border-radius: 30px;
-		background-color: #ccc;
 		width: 100%;
-		min-width: 400px;
-		height: 500px;
+		height: 300px;
 	}
 	div.descricao-video{
-		margin-top: 40px;
+		margin-top: 60px;
 		padding-left: 0;
 		width: 100%;
+	}
+}
+@media screen and (max-width: 700px){
+	section.container-sobre{
+		width: 100%;
+		padding-top: 70%;
+		min-height: 700px;
+		position: relative;
+	}
+	div.img-publicacao{
+		display: inline-block;
+		float: none;
+		width: 100px;
+		height: 100px;
 	}
 }
